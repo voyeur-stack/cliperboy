@@ -1,0 +1,27 @@
+{
+  "_leia": [
+    "MODELO. Copie este arquivo para `caminhos.local.json` (na mesma pasta) e",
+    "preencha com os caminhos DESTA máquina. O `caminhos.local.json` NÃO sobe",
+    "para o repositório — cada PC tem o seu.",
+    "",
+    "Por que existe: estes três não mudam por lote, mas moram FORA do projeto,",
+    "em drives que só existem em uma máquina. Cravados no código, chegavam",
+    "quebrados no PC de quem clonasse — e quebravam em runtime, no meio de um",
+    "lote, não na hora de instalar.",
+    "",
+    "Cada um pode ser trocado por variável de ambiente, que vence o arquivo:",
+    "EDICAO_MODELO_WHISPER, EDICAO_LEAK, EDICAO_MUSICAS.",
+    "",
+    "Falta um deles? Só quebra a fase que o usa, com mensagem dizendo qual",
+    "chave falta. Um lote de legendas não precisa de leak nem de música."
+  ],
+  "_modelo_whisper": "Modelo ggml do filtro `whisper` do ffmpeg (~1,6 GB). É a rota BARATA, para só ler o texto. Para decidir corte ou sincronizar legenda a rota é outra: `scripts/fw.py` (faster-whisper large-v3), que baixa o modelo sozinho e não usa esta chave.",
+  "modelo_whisper": "D:\\Modelos\\whisper\\ggml-large-v3-turbo.bin",
+  "_leak": "Clipe de light leak usado nas transições. Asset real do operador, sem som. O clarão está 233 ms depois do início do clipe — é por ele que a transição é ancorada, não pelo início. NUNCA re-encodar nem recortar este arquivo: qualquer conversão desloca o clarão e as transições saem do lugar. Copiar byte a byte e conferir por MD5.",
+  "leak": "C:/Clipes/assets/leak.mp4",
+  "_musicas": "Acervo de música de fundo (desde 02/10/2026): `Musicas/Acervo`, 19 faixas, UMA pasta sem subpasta — o operador joga faixa nova ali (.mp3/.wav/.m4a) e ela entra sozinha, em ordem de nome. Não há mais busca por subpasta `2`. A pasta-mãe `Musicas` é o original (22 arquivos, 3 com Copia no nome), mantida intacta. Histórico: Até 15/08/2026 o acervo estava aninhado em `Músicas/2` e `Músicas/2/2`, e a pasta-mãe de 504 MB NÃO era usada por ninguém; ao mover para cá o acervo foi achatado numa pasta só, sem colisão de nome.",
+  "musicas": "C:/Clipes/assets/musicas",
+  "_referencia": "Os vídeos contra os quais TODO o padrão foi medido: os 6 que o operador fez no Premiere (maio) e os 9 aprovados de julho, com as legendas. São 596 MB e não sobem para o repositório. Serve para validar medidor contra verdade conhecida — a regra 'quando o medidor reprova algo que se sabe presente, o defeito é dele'. Se você tiver a pasta `referencia/` local, ela vence esta.",
+  "referencia": "C:/Clipes/assets/referencia",
+  "aprovados": "C:/Clipes/aprovados"
+}

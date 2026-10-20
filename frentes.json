@@ -1,0 +1,4 @@
+{
+  "burntpeanut": {"tipo": "canal", "alvo": "burntpeanut", "dias": 1, "top": 8, "min_views": 50},
+  "wardogs": {"tipo": "jogo", "alvo": "WARDOGS", "dias": 2, "top": 15, "min_views": 100, "lingua": "en"}
+}
