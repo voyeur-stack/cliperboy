@@ -1,0 +1,11 @@
+.env
+*.local.json
+/saida/
+/brutos/
+__pycache__/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
